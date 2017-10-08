@@ -14,5 +14,7 @@ enum RachioService {
 }
 
 extension RachioService: TargetType {
-    
+    var baseURL: URL {
+        return URL(string: "https://api.rach.io")!
+    }
 }
