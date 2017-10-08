@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import Moya
 
 enum RachioService {
     case person
 }
 
+extension RachioService: TargetType {
+    
+}
