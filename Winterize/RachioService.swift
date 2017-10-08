@@ -42,4 +42,17 @@ extension RachioService: TargetType {
     var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
+    
+    var sampleData: Data {
+        switch self {
+        case .person:
+            return "{\"id\" : \"c8d10892-fd69-48b3-8743-f111e4392d8a\"}".utf8Encoded
+        }
+    }
+}
+
+private extension String {
+    var utf8Encoded: Data {
+        return self.data(using: .utf8)!
+    }
 }
