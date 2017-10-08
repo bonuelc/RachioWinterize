@@ -38,4 +38,8 @@ extension RachioService: TargetType {
             return nil
         }
     }
+    
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
 }
