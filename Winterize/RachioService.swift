@@ -31,4 +31,11 @@ extension RachioService: TargetType {
             return .get
         }
     }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .person:
+            return nil
+        }
+    }
 }
