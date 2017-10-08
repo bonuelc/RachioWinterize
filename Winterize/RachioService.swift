@@ -49,6 +49,13 @@ extension RachioService: TargetType {
             return "{\"id\" : \"c8d10892-fd69-48b3-8743-f111e4392d8a\"}".utf8Encoded
         }
     }
+    
+    var task: Task {
+        switch self {
+        case .person:
+            return .request
+        }
+    }
 }
 
 private extension String {
