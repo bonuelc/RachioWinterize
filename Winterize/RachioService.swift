@@ -24,4 +24,11 @@ extension RachioService: TargetType {
             return "/1/public/person/info"
         }
     }
+    
+    var method: Moya.Method {
+        switch self {
+        case .person:
+            return .get
+        }
+    }
 }
