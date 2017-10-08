@@ -17,4 +17,11 @@ extension RachioService: TargetType {
     var baseURL: URL {
         return URL(string: "https://api.rach.io")!
     }
+    
+    var path: String {
+        switch self {
+        case .person:
+            return "/1/public/person/info"
+        }
+    }
 }
