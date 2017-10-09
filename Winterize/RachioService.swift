@@ -59,7 +59,12 @@ extension RachioService: TargetType {
     }
     
     var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        switch self {
+        case .person:
+            return URLEncoding.default
+        case .startZone:
+            return JSONEncoding.default
+        }
     }
     
     var sampleData: Data {
