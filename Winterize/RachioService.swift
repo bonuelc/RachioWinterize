@@ -13,6 +13,14 @@ enum RachioService {
     case person
     
     fileprivate static let api_token = "599c4261-103d-4e9a-b5c4-06558c7fcbe9"
+    static let endpointClosure = { (target: RachioService) -> Endpoint<RachioService> in
+        return Endpoint<RachioService>(url: "\(target.baseURL)\(target.path)",
+            sampleResponseClosure: { .networkResponse(200, target.sampleData) },
+            method: target.method,
+            parameters: target.parameters,
+            parameterEncoding: target.parameterEncoding,
+            httpHeaderFields: target.headers)
+    }
 }
 
 extension RachioService: TargetType {
