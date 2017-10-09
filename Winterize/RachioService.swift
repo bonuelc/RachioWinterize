@@ -35,6 +35,8 @@ extension RachioService: TargetType {
             return "/1/public/person/\(id)"
         case .person:
             return "/1/public/person/info"
+        case .startZone:
+            return "/1/public/zone/start"
         }
     }
     
