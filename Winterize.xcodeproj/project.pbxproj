@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D9AFD70F509792D94DF946 /* Pods_Winterize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6FC991CA7F78682966483 /* Pods_Winterize.framework */; };
 		852E547E1F8AA5E0007A5097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547D1F8AA5E0007A5097 /* AppDelegate.swift */; };
 		852E54801F8AA5E0007A5097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547F1F8AA5E0007A5097 /* ViewController.swift */; };
 		852E54831F8AA5E0007A5097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852E54811F8AA5E0007A5097 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05528BDE49B8489EB8E2B875 /* Pods-Winterize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winterize.release.xcconfig"; path = "Pods/Target Support Files/Pods-Winterize/Pods-Winterize.release.xcconfig"; sourceTree = "<group>"; };
+		54F6FC991CA7F78682966483 /* Pods_Winterize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winterize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		852E547A1F8AA5E0007A5097 /* Winterize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winterize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852E547D1F8AA5E0007A5097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852E547F1F8AA5E0007A5097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		852E54841F8AA5E1007A5097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852E54871F8AA5E1007A5097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852E54891F8AA5E1007A5097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06DD081F9E2D75F8D56F637 /* Pods-Winterize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winterize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Winterize/Pods-Winterize.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D9AFD70F509792D94DF946 /* Pods_Winterize.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AB84C62D34F3B2948167FDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F6FC991CA7F78682966483 /* Pods_Winterize.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		852E54711F8AA5E0007A5097 = {
 			isa = PBXGroup;
 			children = (
 				852E547C1F8AA5E0007A5097 /* Winterize */,
 				852E547B1F8AA5E0007A5097 /* Products */,
+				C37A62BD0B20E7C315025263 /* Pods */,
+				1AB84C62D34F3B2948167FDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Winterize;
 			sourceTree = "<group>";
 		};
+		C37A62BD0B20E7C315025263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C06DD081F9E2D75F8D56F637 /* Pods-Winterize.debug.xcconfig */,
+				05528BDE49B8489EB8E2B875 /* Pods-Winterize.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 852E548C1F8AA5E1007A5097 /* Build configuration list for PBXNativeTarget "Winterize" */;
 			buildPhases = (
+				320E675DC6F512BF9207B366 /* [CP] Check Pods Manifest.lock */,
 				852E54761F8AA5E0007A5097 /* Sources */,
 				852E54771F8AA5E0007A5097 /* Frameworks */,
 				852E54781F8AA5E0007A5097 /* Resources */,
+				F1325B02F90666D1DBAE12B7 /* [CP] Embed Pods Frameworks */,
+				F19C7479D929B295B8EFA72A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		320E675DC6F512BF9207B366 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Winterize-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1325B02F90666D1DBAE12B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Winterize/Pods-Winterize-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Winterize/Pods-Winterize-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F19C7479D929B295B8EFA72A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Winterize/Pods-Winterize-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		852E54761F8AA5E0007A5097 /* Sources */ = {
@@ -261,6 +350,7 @@
 		};
 		852E548D1F8AA5E1007A5097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06DD081F9E2D75F8D56F637 /* Pods-Winterize.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
@@ -275,6 +365,7 @@
 		};
 		852E548E1F8AA5E1007A5097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05528BDE49B8489EB8E2B875 /* Pods-Winterize.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
