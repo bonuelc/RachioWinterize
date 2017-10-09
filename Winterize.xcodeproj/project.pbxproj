@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18D9AFD70F509792D94DF946 /* Pods_Winterize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6FC991CA7F78682966483 /* Pods_Winterize.framework */; };
+		852D3B071F8AD3F7008A13ED /* RachioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D3B061F8AD3F7008A13ED /* RachioService.swift */; };
 		852E547E1F8AA5E0007A5097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547D1F8AA5E0007A5097 /* AppDelegate.swift */; };
 		852E54801F8AA5E0007A5097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547F1F8AA5E0007A5097 /* ViewController.swift */; };
 		852E54831F8AA5E0007A5097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852E54811F8AA5E0007A5097 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		05528BDE49B8489EB8E2B875 /* Pods-Winterize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winterize.release.xcconfig"; path = "Pods/Target Support Files/Pods-Winterize/Pods-Winterize.release.xcconfig"; sourceTree = "<group>"; };
 		54F6FC991CA7F78682966483 /* Pods_Winterize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winterize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852D3B061F8AD3F7008A13ED /* RachioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RachioService.swift; sourceTree = "<group>"; };
 		852E547A1F8AA5E0007A5097 /* Winterize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winterize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852E547D1F8AA5E0007A5097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852E547F1F8AA5E0007A5097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				852E547D1F8AA5E0007A5097 /* AppDelegate.swift */,
 				852E547F1F8AA5E0007A5097 /* ViewController.swift */,
+				852D3B061F8AD3F7008A13ED /* RachioService.swift */,
 				852E54811F8AA5E0007A5097 /* Main.storyboard */,
 				852E54841F8AA5E1007A5097 /* Assets.xcassets */,
 				852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 			files = (
 				852E54801F8AA5E0007A5097 /* ViewController.swift in Sources */,
 				852E547E1F8AA5E0007A5097 /* AppDelegate.swift in Sources */,
+				852D3B071F8AD3F7008A13ED /* RachioService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
