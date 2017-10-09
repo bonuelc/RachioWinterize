@@ -79,7 +79,7 @@ extension RachioService: TargetType {
     
     var task: Task {
         switch self {
-        case .person:
+        case .person, .startZone:
             return .request
         }
     }
