@@ -11,6 +11,7 @@ import Moya
 
 enum RachioService {
     case person(id: String?)
+    case startZone(id: String, duration: TimeInterval)
     
     fileprivate static let api_token = "599c4261-103d-4e9a-b5c4-06558c7fcbe9"
     static let endpointClosure = { (target: RachioService) -> Endpoint<RachioService> in
