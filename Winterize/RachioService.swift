@@ -11,6 +11,8 @@ import Moya
 
 enum RachioService {
     case person
+    
+    fileprivate static let api_token = "599c4261-103d-4e9a-b5c4-06558c7fcbe9"
 }
 
 extension RachioService: TargetType {
