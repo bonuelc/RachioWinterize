@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum RachioService {
-    case person
+    case person(id: String?)
     
     fileprivate static let api_token = "599c4261-103d-4e9a-b5c4-06558c7fcbe9"
     static let endpointClosure = { (target: RachioService) -> Endpoint<RachioService> in
@@ -30,6 +30,8 @@ extension RachioService: TargetType {
     
     var path: String {
         switch self {
+        case .person(let id?):
+            return "/1/public/person/\(id)"
         case .person:
             return "/1/public/person/info"
         }
@@ -55,6 +57,7 @@ extension RachioService: TargetType {
     
     var sampleData: Data {
         switch self {
+        // TODO: case .person(let id?): return long json string
         case .person:
             return "{\"id\" : \"c8d10892-fd69-48b3-8743-f111e4392d8a\"}".utf8Encoded
         }
