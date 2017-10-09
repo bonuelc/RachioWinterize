@@ -44,6 +44,8 @@ extension RachioService: TargetType {
         switch self {
         case .person:
             return .get
+        case .startZone:
+            return .put
         }
     }
     
