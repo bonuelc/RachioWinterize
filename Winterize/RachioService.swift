@@ -53,6 +53,8 @@ extension RachioService: TargetType {
         switch self {
         case .person:
             return nil
+        case .startZone(let id, let duration):
+            return ["id": id, "duration": duration]
         }
     }
     
