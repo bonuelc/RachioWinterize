@@ -60,6 +60,12 @@ extension RachioService: TargetType {
     }
 }
 
+extension RachioService {
+    var headers: [String: String]? {
+        return ["Content-Type": "application/json", "Authorization": "Bearer \(RachioService.api_token)"]
+    }
+}
+
 private extension String {
     var utf8Encoded: Data {
         return self.data(using: .utf8)!
