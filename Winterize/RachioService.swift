@@ -72,6 +72,8 @@ extension RachioService: TargetType {
         // TODO: case .person(let id?): return long json string
         case .person:
             return "{\"id\" : \"c8d10892-fd69-48b3-8743-f111e4392d8a\"}".utf8Encoded
+        case .startZone:
+            return "".utf8Encoded
         }
     }
     
