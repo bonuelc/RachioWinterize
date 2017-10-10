@@ -11,6 +11,7 @@ import Moya
 
 enum RachioService {
     case person(id: String?)
+    case startZone(id: String, duration: TimeInterval)
     
     fileprivate static let api_token = "599c4261-103d-4e9a-b5c4-06558c7fcbe9"
     static let endpointClosure = { (target: RachioService) -> Endpoint<RachioService> in
@@ -34,6 +35,8 @@ extension RachioService: TargetType {
             return "/1/public/person/\(id)"
         case .person:
             return "/1/public/person/info"
+        case .startZone:
+            return "/1/public/zone/start"
         }
     }
     
@@ -41,6 +44,8 @@ extension RachioService: TargetType {
         switch self {
         case .person:
             return .get
+        case .startZone:
+            return .put
         }
     }
     
@@ -48,11 +53,18 @@ extension RachioService: TargetType {
         switch self {
         case .person:
             return nil
+        case .startZone(let id, let duration):
+            return ["id": id, "duration": duration]
         }
     }
     
     var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        switch self {
+        case .person:
+            return URLEncoding.default
+        case .startZone:
+            return JSONEncoding.default
+        }
     }
     
     var sampleData: Data {
@@ -60,12 +72,14 @@ extension RachioService: TargetType {
         // TODO: case .person(let id?): return long json string
         case .person:
             return "{\"id\" : \"c8d10892-fd69-48b3-8743-f111e4392d8a\"}".utf8Encoded
+        case .startZone:
+            return "".utf8Encoded
         }
     }
     
     var task: Task {
         switch self {
-        case .person:
+        case .person, .startZone:
             return .request
         }
     }
