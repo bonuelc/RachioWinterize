@@ -9,4 +9,5 @@
 import UIKit
 
 class ZoneCell: UITableViewCell {
+    static let reuseIdentifier = "ZoneCell"
 }
