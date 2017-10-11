@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         title = "Rachio"
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.barTintColor = .rachioBlue
     }
 }
 
