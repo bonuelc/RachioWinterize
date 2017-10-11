@@ -28,5 +28,9 @@ class ViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    override func viewDidLoad() {
+        title = "Rachio"
+    }
 }
 
