@@ -11,7 +11,6 @@
 		852D3B071F8AD3F7008A13ED /* RachioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D3B061F8AD3F7008A13ED /* RachioService.swift */; };
 		852E547E1F8AA5E0007A5097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547D1F8AA5E0007A5097 /* AppDelegate.swift */; };
 		852E54801F8AA5E0007A5097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E547F1F8AA5E0007A5097 /* ViewController.swift */; };
-		852E54831F8AA5E0007A5097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852E54811F8AA5E0007A5097 /* Main.storyboard */; };
 		852E54851F8AA5E1007A5097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852E54841F8AA5E1007A5097 /* Assets.xcassets */; };
 		852E54881F8AA5E1007A5097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -23,7 +22,6 @@
 		852E547A1F8AA5E0007A5097 /* Winterize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winterize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852E547D1F8AA5E0007A5097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852E547F1F8AA5E0007A5097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		852E54821F8AA5E0007A5097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		852E54841F8AA5E1007A5097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852E54871F8AA5E1007A5097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852E54891F8AA5E1007A5097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				852E547D1F8AA5E0007A5097 /* AppDelegate.swift */,
 				852E547F1F8AA5E0007A5097 /* ViewController.swift */,
 				852D3B061F8AD3F7008A13ED /* RachioService.swift */,
-				852E54811F8AA5E0007A5097 /* Main.storyboard */,
 				852E54841F8AA5E1007A5097 /* Assets.xcassets */,
 				852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */,
 				852E54891F8AA5E1007A5097 /* Info.plist */,
@@ -156,7 +153,6 @@
 			files = (
 				852E54881F8AA5E1007A5097 /* LaunchScreen.storyboard in Resources */,
 				852E54851F8AA5E1007A5097 /* Assets.xcassets in Resources */,
-				852E54831F8AA5E0007A5097 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,14 +234,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		852E54811F8AA5E0007A5097 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				852E54821F8AA5E0007A5097 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
