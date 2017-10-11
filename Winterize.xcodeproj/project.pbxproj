@@ -14,6 +14,7 @@
 		852E54851F8AA5E1007A5097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852E54841F8AA5E1007A5097 /* Assets.xcassets */; };
 		852E54881F8AA5E1007A5097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */; };
 		85DB0B721F8EBD8400861D37 /* ZoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB0B711F8EBD8400861D37 /* ZoneCell.swift */; };
+		85DB0B741F8ED42F00861D37 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB0B731F8ED42F00861D37 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		852E54871F8AA5E1007A5097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852E54891F8AA5E1007A5097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85DB0B711F8EBD8400861D37 /* ZoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneCell.swift; sourceTree = "<group>"; };
+		85DB0B731F8ED42F00861D37 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C06DD081F9E2D75F8D56F637 /* Pods-Winterize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winterize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Winterize/Pods-Winterize.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				852E547F1F8AA5E0007A5097 /* ViewController.swift */,
 				85DB0B711F8EBD8400861D37 /* ZoneCell.swift */,
 				852D3B061F8AD3F7008A13ED /* RachioService.swift */,
+				85DB0B731F8ED42F00861D37 /* UIColor+.swift */,
 				852E54841F8AA5E1007A5097 /* Assets.xcassets */,
 				852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */,
 				852E54891F8AA5E1007A5097 /* Info.plist */,
@@ -232,6 +235,7 @@
 				85DB0B721F8EBD8400861D37 /* ZoneCell.swift in Sources */,
 				852E547E1F8AA5E0007A5097 /* AppDelegate.swift in Sources */,
 				852D3B071F8AD3F7008A13ED /* RachioService.swift in Sources */,
+				85DB0B741F8ED42F00861D37 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
