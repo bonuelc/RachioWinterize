@@ -8,7 +8,36 @@
 
 import Moya
 import RxSwift
+import SwiftyJSON
+import RealmSwift
 
 class DataController {
     private let provider = RxMoyaProvider(endpointClosure: RachioService.endpointClosure)
+    private let bag = DisposeBag()
+    
+    func fetchZones() {
+        let user_id = provider.request(.person(id: nil))
+            .mapString(atKeyPath: "id")
+            
+        user_id.subscribe(onNext: { id in
+            self.provider.request(.person(id: id)).subscribe(onNext: { response in
+                switch response.statusCode {
+                case 200:
+                    let json = JSON(data: response.data)
+                    let devices = json["devices"].arrayValue
+                    let realm = try! Realm()
+                    _ = devices.flatMap { $0["zones"] }
+                        .map { (_, zoneJSON) in
+                            let zone = Zone(json: zoneJSON)
+                            try! realm.write {
+                                realm.add(zone)
+                            }
+                    }
+                default:
+                    // TODO: - Handle fetch failure
+                    print(response.statusCode)
+                }
+            }).disposed(by: self.bag)
+        }).disposed(by: bag)
+    }
 }
