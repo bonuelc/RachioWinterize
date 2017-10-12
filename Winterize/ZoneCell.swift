@@ -39,4 +39,10 @@ class ZoneCell: UITableViewCell {
             label.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
         ])
     }
+    
+    @discardableResult
+    func configured(with zone: Zone) -> ZoneCell {
+        label.text = zone.name
+        return self
+    }
 }
