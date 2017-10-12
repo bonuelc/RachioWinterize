@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(ZoneCell.self, forCellReuseIdentifier: ZoneCell.reuseIdentifier)
         return tableView
