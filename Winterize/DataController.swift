@@ -6,6 +6,9 @@
 //  Copyright © 2017 Christopher Bonuel. All rights reserved.
 //
 
+import Moya
+import RxSwift
+
 class DataController {
-    
+    private let provider = RxMoyaProvider(endpointClosure: RachioService.endpointClosure)
 }
