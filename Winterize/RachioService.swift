@@ -23,6 +23,7 @@ enum RachioService {
             parameterEncoding: target.parameterEncoding,
             httpHeaderFields: target.headers)
     }
+    static let maximumZoneRunTime: TimeInterval = 10800
 }
 
 extension RachioService: TargetType {

@@ -40,4 +40,17 @@ class DataController {
             }).disposed(by: self.bag)
         }).disposed(by: bag)
     }
+    
+    func start(_ zone: Zone, duration: TimeInterval = RachioService.maximumZoneRunTime) {
+        provider.request(.startZone(id: zone.id, duration: duration)).subscribe(onNext: { response in
+            switch response.statusCode {
+            case 204:
+                break
+            default:
+                // TODO: - Handle start zone failure
+                print(response.statusCode)
+                print(JSON(data: response.data))
+            }
+        }).disposed(by: bag)
+    }
 }
