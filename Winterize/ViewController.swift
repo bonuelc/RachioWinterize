@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     let dataController: DataController
+    var zones: Results<Zone>!
     
     // MARK: - UI
     
