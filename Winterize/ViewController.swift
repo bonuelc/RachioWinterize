@@ -48,6 +48,9 @@ class ViewController: UIViewController {
         title = "Rachio"
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = .rachioBlue
+        
+        let realm = try! Realm()
+        zones = realm.objects(Zone.self).sorted(byKeyPath: "number")
     }
 }
 
