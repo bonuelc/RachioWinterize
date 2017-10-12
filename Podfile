@@ -5,4 +5,5 @@ target 'Winterize' do
   pod 'SwiftyJSON', '~> 3.1'
   pod 'RealmSwift', '~> 2.10'
   pod 'RxRealm', '~> 0.7'
+  pod 'RxCocoa', '~> 3.6'
 end

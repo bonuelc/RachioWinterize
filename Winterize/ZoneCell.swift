@@ -21,6 +21,7 @@ class ZoneCell: UITableViewCell {
     
     lazy var toggle: UISwitch = {
         let toggle = UISwitch()
+        toggle.isOn = false
         toggle.translatesAutoresizingMaskIntoConstraints = false
         return toggle
     }()
