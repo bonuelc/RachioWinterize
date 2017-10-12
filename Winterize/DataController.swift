@@ -53,4 +53,8 @@ class DataController {
             }
         }).disposed(by: bag)
     }
+    
+    func stop(_ zone: Zone) {
+        start(zone, duration: 0)
+    }
 }
