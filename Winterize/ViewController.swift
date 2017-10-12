@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     let dataController: DataController
@@ -82,6 +83,11 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let zone = zones[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ZoneCell.reuseIdentifier) as! ZoneCell
+        cell.toggle.rx.isOn
+            .skip(1)
+            .subscribe(onNext: { isOn in
+                isOn ? self.dataController.start(zone) : self.dataController.stop(zone)
+            }).disposed(by: bag)
         return cell.configured(with: zone)
     }
 }
