@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         zones = realm.objects(Zone.self).sorted(byKeyPath: "number")
         
         bindZonesToTableView()
+        dataController.fetchZones()
     }
     
     func bindZonesToTableView() {
