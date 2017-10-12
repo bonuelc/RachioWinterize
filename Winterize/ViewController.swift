@@ -8,10 +8,12 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
 
 class ViewController: UIViewController {
     let dataController: DataController
     var zones: Results<Zone>!
+    let bag = DisposeBag()
     
     // MARK: - UI
     
@@ -52,6 +54,20 @@ class ViewController: UIViewController {
         
         let realm = try! Realm()
         zones = realm.objects(Zone.self).sorted(byKeyPath: "number")
+        
+        bindZonesToTableView()
+    }
+    
+    func bindZonesToTableView() {
+        Observable.changeset(from: zones)
+            .subscribe(onNext: { [unowned self] _, changeSet in
+                if let changeSet = changeSet {
+                    self.tableView.apply(changeSet)
+                } else {
+                    self.tableView.reloadData()
+                }
+            })
+            .disposed(by: bag)
     }
 }
 
