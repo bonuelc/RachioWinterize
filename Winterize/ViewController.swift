@@ -87,7 +87,7 @@ extension ViewController: UITableViewDataSource {
             .skip(1)
             .subscribe(onNext: { isOn in
                 isOn ? self.dataController.start(zone) : self.dataController.stop(zone)
-            }).disposed(by: bag)
+            }).disposed(by: cell.bag)
         return cell.configured(with: zone)
     }
 }

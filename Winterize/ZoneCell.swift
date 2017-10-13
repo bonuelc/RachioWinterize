@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class ZoneCell: UITableViewCell {
     static let reuseIdentifier = "ZoneCell"
+    let bag = DisposeBag()
     
     // MARK: - UI
     
