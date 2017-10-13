@@ -92,6 +92,11 @@ extension ViewController: UITableViewDataSource {
                     zone.isRunning = isOn
                 }
             }).disposed(by: cell.bag)
-        return cell.configured(with: zone)
+        return cell.configured(with: zone) { _ in
+            let realm = try! Realm()
+            try! realm.write {
+                zone.isRunning = false
+            }
+        }
     }
 }
