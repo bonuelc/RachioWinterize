@@ -13,6 +13,7 @@ class Zone: Object {
     dynamic var id = ""
     dynamic var number = 0
     dynamic var name = ""
+    dynamic var isRunning = false
 
     convenience init(id: String, number: Int, name: String) {
         self.init()
