@@ -38,10 +38,18 @@ class ZoneCell: UITableViewCell {
         return toggle
     }()
     
+    lazy var timerLabel: UILabel = {
+        let label = UILabel()
+        label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func layoutSubviews() {
         contentView.addSubview(nameLabel)
         contentView.addSubview(stepper)
         contentView.addSubview(toggle)
+        contentView.addSubview(timerLabel)
         
         NSLayoutConstraint.activate([
             toggle.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
@@ -56,6 +64,11 @@ class ZoneCell: UITableViewCell {
             nameLabel.rightAnchor.constraint(equalTo: stepper.layoutMarginsGuide.leftAnchor),
             nameLabel.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
+            
+            timerLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor),
+            timerLabel.bottomAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+            timerLabel.leftAnchor.constraint(equalTo: stepper.leftAnchor),
+            timerLabel.rightAnchor.constraint(equalTo: stepper.rightAnchor)
         ])
     }
     
