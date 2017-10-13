@@ -81,20 +81,68 @@
 		852E547C1F8AA5E0007A5097 /* Winterize */ = {
 			isa = PBXGroup;
 			children = (
+				85D1B07E1F91805C00E5E307 /* Models */,
+				85D1B0801F91807100E5E307 /* Controllers */,
+				85D1B07F1F91806C00E5E307 /* Views */,
+				85D1B07D1F91805500E5E307 /* Networking */,
+				85D1B07B1F917FF800E5E307 /* Extensions */,
+				85D1B07C1F91800E00E5E307 /* Assets */,
 				852E547D1F8AA5E0007A5097 /* AppDelegate.swift */,
-				852E547F1F8AA5E0007A5097 /* ViewController.swift */,
-				85DB0B711F8EBD8400861D37 /* ZoneCell.swift */,
-				852D3B061F8AD3F7008A13ED /* RachioService.swift */,
+			);
+			path = Winterize;
+			sourceTree = "<group>";
+		};
+		85D1B07B1F917FF800E5E307 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				85DB0B731F8ED42F00861D37 /* UIColor+.swift */,
-				85CE66081F8E7AAF00DA9500 /* Zone.swift */,
-				859B327F1F8FC33C007E4358 /* DataController.swift */,
 				859B32811F8FCF0E007E4358 /* IndexPath+.swift */,
 				859B32831F8FD0EB007E4358 /* UITableView+.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		85D1B07C1F91800E00E5E307 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				852E54841F8AA5E1007A5097 /* Assets.xcassets */,
 				852E54861F8AA5E1007A5097 /* LaunchScreen.storyboard */,
 				852E54891F8AA5E1007A5097 /* Info.plist */,
 			);
-			path = Winterize;
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		85D1B07D1F91805500E5E307 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				852D3B061F8AD3F7008A13ED /* RachioService.swift */,
+				859B327F1F8FC33C007E4358 /* DataController.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		85D1B07E1F91805C00E5E307 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85CE66081F8E7AAF00DA9500 /* Zone.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		85D1B07F1F91806C00E5E307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85DB0B711F8EBD8400861D37 /* ZoneCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		85D1B0801F91807100E5E307 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				852E547F1F8AA5E0007A5097 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		C37A62BD0B20E7C315025263 /* Pods */ = {
