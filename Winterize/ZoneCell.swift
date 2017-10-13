@@ -11,6 +11,8 @@ import RxSwift
 import ValueStepper
 import MZTimerLabel
 
+typealias TimerCompletion = ((TimeInterval) -> Void)
+
 class ZoneCell: UITableViewCell {
     static let reuseIdentifier = "ZoneCell"
     let bag = DisposeBag()
@@ -74,7 +76,7 @@ class ZoneCell: UITableViewCell {
     }
     
     @discardableResult
-    func configured(with zone: Zone) -> ZoneCell {
+    func configured(with zone: Zone, timerCompletion: TimerCompletion? = nil) -> ZoneCell {
         nameLabel.text = zone.name
         toggle.isOn = zone.isRunning
         stepper.isHidden = zone.isRunning
@@ -83,8 +85,8 @@ class ZoneCell: UITableViewCell {
         if zone.isRunning {
             let timer = MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeTimer)!
             let minutes = stepper.value // BUG: this is always 0.0
-            timer.setCountDownTime(minutes > 0 ? minutes * 60 : RachioService.maximumZoneRunTime)
-            timer.start()
+            timer.setCountDownTime(minutes > 0 ? minutes * 60 : 10)
+            timer.start(ending: timerCompletion)
         }
         
         return self
