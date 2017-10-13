@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import ValueStepper
+import MZTimerLabel
 
 class ZoneCell: UITableViewCell {
     static let reuseIdentifier = "ZoneCell"
@@ -78,6 +79,14 @@ class ZoneCell: UITableViewCell {
         toggle.isOn = zone.isRunning
         stepper.isHidden = zone.isRunning
         timerLabel.isHidden = !zone.isRunning
+        
+        if zone.isRunning {
+            let timer = MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeTimer)!
+            let minutes = stepper.value // BUG: this is always 0.0
+            timer.setCountDownTime(minutes > 0 ? minutes * 60 : RachioService.maximumZoneRunTime)
+            timer.start()
+        }
+        
         return self
     }
 }
