@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ValueStepper
 
 class ZoneCell: UITableViewCell {
     static let reuseIdentifier = "ZoneCell"
@@ -21,6 +22,12 @@ class ZoneCell: UITableViewCell {
         return label
     }()
     
+    lazy var stepper: ValueStepper = {
+        let stepper = ValueStepper()
+        stepper.translatesAutoresizingMaskIntoConstraints = false
+        return stepper
+    }()
+    
     lazy var toggle: UISwitch = {
         let toggle = UISwitch()
         toggle.isOn = false
@@ -30,14 +37,20 @@ class ZoneCell: UITableViewCell {
     
     override func layoutSubviews() {
         contentView.addSubview(label)
+        contentView.addSubview(stepper)
         contentView.addSubview(toggle)
         
         NSLayoutConstraint.activate([
             toggle.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             toggle.rightAnchor.constraint(equalTo: contentView.layoutMarginsGuide.rightAnchor),
             
+            // TODO: un-hardcode this constant
+            stepper.rightAnchor.constraint(equalTo: toggle.layoutMarginsGuide.leftAnchor, constant: -20),
+            stepper.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            stepper.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
             label.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            label.rightAnchor.constraint(equalTo: toggle.layoutMarginsGuide.leftAnchor),
+            label.rightAnchor.constraint(equalTo: stepper.layoutMarginsGuide.leftAnchor),
             label.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
             label.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
         ])
