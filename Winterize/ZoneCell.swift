@@ -16,7 +16,7 @@ class ZoneCell: UITableViewCell {
     
     // MARK: - UI
     
-    lazy var label: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -39,7 +39,7 @@ class ZoneCell: UITableViewCell {
     }()
     
     override func layoutSubviews() {
-        contentView.addSubview(label)
+        contentView.addSubview(nameLabel)
         contentView.addSubview(stepper)
         contentView.addSubview(toggle)
         
@@ -52,16 +52,16 @@ class ZoneCell: UITableViewCell {
             stepper.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             stepper.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            label.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            label.rightAnchor.constraint(equalTo: stepper.layoutMarginsGuide.leftAnchor),
-            label.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
-            label.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
+            nameLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            nameLabel.rightAnchor.constraint(equalTo: stepper.layoutMarginsGuide.leftAnchor),
+            nameLabel.leftAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leftAnchor),
+            nameLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
         ])
     }
     
     @discardableResult
     func configured(with zone: Zone) -> ZoneCell {
-        label.text = zone.name
+        nameLabel.text = zone.name
         toggle.isOn = zone.isRunning
         return self
     }
