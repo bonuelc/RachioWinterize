@@ -82,7 +82,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let zone = zones[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: ZoneCell.reuseIdentifier) as! ZoneCell
+        let cell = ZoneCell()
         cell.toggle.rx.isOn
             .skip(1)
             .subscribe(onNext: { isOn in
