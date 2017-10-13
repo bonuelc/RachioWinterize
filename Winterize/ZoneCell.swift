@@ -24,6 +24,7 @@ class ZoneCell: UITableViewCell {
     
     lazy var stepper: ValueStepper = {
         let stepper = ValueStepper()
+        stepper.maximumValue = RachioService.maximumZoneRunTime / 60
         stepper.translatesAutoresizingMaskIntoConstraints = false
         return stepper
     }()
