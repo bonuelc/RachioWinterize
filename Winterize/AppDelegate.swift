@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func clearRealm() {
+        var config = Realm.Configuration()
+        config.deleteRealmIfMigrationNeeded = true
+        Realm.Configuration.defaultConfiguration = config
+        
         let realm = try! Realm()
         try! realm.write {
             realm.deleteAll()
