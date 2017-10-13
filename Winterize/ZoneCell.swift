@@ -46,6 +46,7 @@ class ZoneCell: UITableViewCell {
     @discardableResult
     func configured(with zone: Zone) -> ZoneCell {
         label.text = zone.name
+        toggle.isOn = zone.isRunning
         return self
     }
 }
