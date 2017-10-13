@@ -76,6 +76,8 @@ class ZoneCell: UITableViewCell {
     func configured(with zone: Zone) -> ZoneCell {
         nameLabel.text = zone.name
         toggle.isOn = zone.isRunning
+        stepper.isHidden = zone.isRunning
+        timerLabel.isHidden = !zone.isRunning
         return self
     }
 }
