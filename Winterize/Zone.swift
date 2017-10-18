@@ -14,6 +14,7 @@ class Zone: Object {
     dynamic var number = 0
     dynamic var name = ""
     dynamic var isRunning = false
+    dynamic var duration = 0.0
 
     convenience init(id: String, number: Int, name: String) {
         self.init()
