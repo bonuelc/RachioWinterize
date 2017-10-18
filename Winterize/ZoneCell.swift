@@ -27,6 +27,7 @@ class ZoneCell: UITableViewCell {
     
     lazy var stepper: ValueStepper = {
         let stepper = ValueStepper()
+        stepper.stepValue = 1
         stepper.maximumValue = RachioService.maximumZoneRunTime / 60
         stepper.backgroundColor = UIColor.clear
         stepper.tintColor = UIColor.rachioBlue
